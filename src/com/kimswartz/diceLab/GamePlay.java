@@ -48,20 +48,25 @@ public class GamePlay {
 
             System.out.println(player.getName() + " scored for a total of: " + player.getTotalScore() + " points!");
 
-
         }
 
     }
 
-    public void theWinner () {
+    public void theWinner() {
+
+        Player winner = ListOfPlayers.get(0); // Assume the first player is the initial winner.
 
         for (Player player : ListOfPlayers) {
-            System.out.println(player.getName() + " has total" + player.getTotalScore());
+            if (player.getTotalScore() > winner.getTotalScore()) {
+                winner = player; // Update the winner if a player has a higher score.
+            }
         }
 
-        }
+        System.out.println("The winner is: " + winner.getName() + " with a total score of " + winner.getTotalScore());
 
     }
+
+}
 
 
 

@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ab2d9182-cb39-4392-b965-bbb6c93f05f1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Die.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Die.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/GameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/GameLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/GamePlay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
