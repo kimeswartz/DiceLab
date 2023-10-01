@@ -7,6 +7,8 @@ public class GameLogic {
 
         GamePlay diceGame = new GamePlay();
         diceGame.CreatePlayers();
+        diceGame.PlayDice();
+        diceGame.theWinner();
 
     }
 
