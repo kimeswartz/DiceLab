@@ -1,5 +1,9 @@
 package com.kimswartz.diceLab.Scanner;
 
+/*
+This scanner is used for user input inside GamePlay class
+ */
+
 import java.util.Scanner;
 
 public class MyScanner

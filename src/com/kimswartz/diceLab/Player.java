@@ -6,16 +6,12 @@ public class Player {
     private int totalScore;
 
 
-    Player(String name) { // no-args constructor
+    Player(String name) {
         this.name = name;
     }
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     // Score:
