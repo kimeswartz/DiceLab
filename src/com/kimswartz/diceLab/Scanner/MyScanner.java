@@ -1,10 +1,10 @@
-package com.kimswartz.diceLab;
+package com.kimswartz.diceLab.Scanner;
 
 import java.util.Scanner;
 
 public class MyScanner
 {
-    static Scanner scan = new Scanner(System.in);
+    public static Scanner scan = new Scanner(System.in);
 
     public static String scan()
     {
