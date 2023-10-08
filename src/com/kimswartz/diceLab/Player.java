@@ -24,4 +24,5 @@ public class Player {
         totalScore += score;
     }
 
+
 }

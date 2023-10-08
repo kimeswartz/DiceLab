@@ -1,71 +1,203 @@
 package com.kimswartz.diceLab;
+
 import static com.kimswartz.diceLab.Scanner.MyScanner.*;
 
 import java.util.ArrayList;
 
 public class GamePlay {
 
-    // #1 We store players in an ArrayList:
-    ArrayList<Player> ListOfPlayers = new ArrayList<>();
+    ArrayList<Player> ListOfPlayers = new ArrayList<>(); // We save our players in an ArrayList
 
-    // #2: We create a six sided die object for players to roll:
-    private Die dice = new Die();
+    int numberOfPlayers; // User input amount of players value in game step #1.
+    Die dice = new Die();
+    int noOfDice; // User input amount of dice value in game step #2.
+    int score = 0; // We set our score variable to count from 0 for our playDice() method.
 
+    // Our method to call the entire game in Main.
+    public void runGame() {
 
-    // #3: Our method to let user add players and store it in our ArrayList:
-    public void CreatePlayers() {
+        int choice;
 
-        do {
-            System.out.println("Please enter the first player's name");
-            String playerName = scan.nextLine();
-            Player newPlayer = new Player(playerName);
-            ListOfPlayers.add(newPlayer);
+        while (true) {
+            try {
+                displayMenu();
+                choice = scan.nextInt();
 
-            System.out.println("Great, " + playerName + " is added! Would you like to add another player? Enter Y / N");
-        } while (scan.nextLine().equalsIgnoreCase("y"));
+                switch (choice) {
+                    case 1:
+                        System.out.println("You chose option 1: Add players!");
+                        addPlayers();
+                        break;
+                    case 2:
+                        System.out.println("You chose option 2: Enter number of dice!");
+                        addDice();
+                        break;
+                    case 3:
+                        System.out.println("You chose option 3: Play the game!");
+                        rollDice();
+                        break;
 
+                    case 4:
+                        System.out.println("You chose option 4: See player scores!");
+                        getTotalScore();
+                        break;
+
+                    case 5:
+                        System.out.println("You chose option 5: Reveal the winner!");
+                        getWinners();
+                        break;
+
+                    case 6:
+                        System.out.println("You chose option 6: Exiting the game");
+                        scan.close();
+                        System.exit(0);
+
+                        break;
+                    default:
+                        System.out.println("Invalid choice. Please select a valid option!");
+                }
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("Oops! Invalid input. Try again!");
+                scan.next();
+            }
+        }
     }
 
-    // #4: Our method to start the game by letting rolling the dice:
-    protected void PlayDice() {
+    // Our method to display the switch menu with user options.
+    public void displayMenu() {
+        System.out.println("Menu Options:");
+        System.out.println("1. Add players");
+        System.out.println("2. Add dice");
+        System.out.println("3. Play!");
+        System.out.println("4. See score");
+        System.out.println("5. Reveal winner(s)");
+        System.out.println("6. Exit");
+    }
 
-        /*  We for-loop through our ArrayList: ListOfPlayers to add and save the dice values */
-        for (Player player : ListOfPlayers) {
+    // #1 Our method to add amount of players and names.
+    public void addPlayers() {
+        System.out.println("Enter number of (at least two) players:");
+        numberOfPlayers = scan.nextInt();
 
-            int firstRoll = dice.roll();
-            int secondRoll = dice.roll();
-            int currentScore = firstRoll + secondRoll;
+        // If user enter less than 2 players.
+        if (numberOfPlayers < 2) {
+            System.out.println("Sorry! You must enter at least two players, please try again!");
+            addPlayers();
+        } else {
+            System.out.println("Great! You are now " + numberOfPlayers + " players!");
 
-            System.out.println(player.getName() + " rolled " + firstRoll + " and " + secondRoll);
+            // Input player names. For loop run until the number of players is reached.
+            for (int i = 1; i <= numberOfPlayers; i++) {
 
-            player.setTotalScore(currentScore); // We save the value to setTotalScore-method in Player class
+                System.out.print("Enter the name of player " + i + ": ");
+                String playerName = scan.next();
+                ListOfPlayers.add(new Player(playerName));
+                System.out.println(playerName + " is added to the game!");
+            }
+        }
+    }
 
-            System.out.println(player.getName() + " scored for a total of: " + player.getTotalScore() + " points!");
+    // #4 Our method to roll the dice.
+    public void addDice() {
+        System.out.println("Enter number of dice (at least 2) for each player:");
+
+        // If number of dice is less than 2' we will ask user to try again.
+        try {
+            noOfDice = scan.nextInt();
+
+            if (noOfDice < 2) {
+                System.out.println("Sorry, it seems like you chose less than two dice, try again!");
+                addDice();
+            } else {
+                System.out.println("All set! Each player has " + noOfDice + " dice!");
+            }
+
+            // if user input is a string we will ask to try again.
+        } catch (java.util.InputMismatchException e) {
+            System.out.println("Oops! Invalid input, try again!");
+            scan.next();
         }
     }
 
-    // #5 Our method to determine and announce the winner:
-    public void theWinner() {
+    // #5 Roll the dice and play the game.
+    public void rollDice() {
+        if (ListOfPlayers.isEmpty()) {
+            System.out.println("You must enter players first");
+        } else {
 
-        // We assume the 1:st player in our ArrayList is the initial winner.
-        Player winner = ListOfPlayers.get(0);
+            // After checking if there are any players added, we for-loop the Dice object as many times as noOfDice is set, and add the result to the player score.
 
-        for (Player player : ListOfPlayers) {
-            if (player.getTotalScore() > winner.getTotalScore()) {
-                winner = player; // Update the winner if a player has a higher score.
+            for (Player player : ListOfPlayers) {
+
+                for (int i = 1; i <= noOfDice; i++) {
+                    int currentScore = score + dice.roll();
+
+                    System.out.printf(player.getName() + " rolled dice no'%d", i);
+                    player.setTotalScore(currentScore);
+                    System.out.println(" and scored " + currentScore + " points");
+                }
             }
         }
-        System.out.println("The winner is: " + winner.getName() + " with a total score of " + winner.getTotalScore() + " points!");
+    }
 
+    // #6 See the total score
+    public void getTotalScore() {
 
-        /*
+        // We start to check if there are any players, and the loop the entire Player ArrayLst to show each name and total score.
+        if (ListOfPlayers.isEmpty()) {
+            System.out.println("You must enter players, dice and play the game first!");
+        } else {
+            for (Player player : ListOfPlayers) {
+                System.out.println(player.getName() + "´s total score is: " + player.getTotalScore());
+            }
+        }
+    }
 
-        else {
-                System.out.println("It's a tie! Both players have a score of " + winner.getTotalScore() + ".");
+    // #7 Reveal the winner(s)
+    public void getWinners() {
+
+        // We start to check if user has added players.
+        if (ListOfPlayers.isEmpty()) {
+            System.out.println("You must enter players, dice and play the game first!");
+        } else {
+
+            // See more info below.
+            /*
+            1. We assume all players in ListOfPlayers are winners by setting a low masScore.
+            2. We create another ArrayList named winners, and add our players in it by looping our players list.
+            All players are added to the winners ArrayList since they all have higher score than -1.
+            3. If there´s only one winner in winners ArrayList he will be announced as the winner. If there are several winners in the list,
+            these will be presented as a tie.
+             */
+
+            int maxScore = -1;
+
+            // Find the player with the highest score
+            for (Player player : ListOfPlayers) {
+                if (player.getTotalScore() > maxScore) {
+                    maxScore = player.getTotalScore();
+                }
             }
 
+            // Determine the winner(s) and add all players to the winners ArrayList.
+            ArrayList<Player> winners = new ArrayList<>();
+            for (Player player : ListOfPlayers) {
+                if (player.getTotalScore() == maxScore) {
+                    winners.add(player);
+                }
+            }
 
-         */
+            // Announce the winner(s) from winners ArrayList.
+            if (winners.size() == 1) {
+                System.out.println(winners.get(0).getName() + " wins with a score of " + maxScore);
+            } else {
+                System.out.println("It's a tie between the following players:");
+                for (Player winner : winners) {
+                    System.out.println(winner.getName() + " with a score of " + maxScore);
+                }
+            }
+
+        }
 
     }
 

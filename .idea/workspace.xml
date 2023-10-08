@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab2d9182-cb39-4392-b965-bbb6c93f05f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Test/com/kim/testpackage/DieTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/com/kim/testpackage/PlayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/GameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/GameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dice_lab_2023.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dice_lab_2023.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Die.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Die.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/GameLogic.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/GamePlay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/TODO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Scanner/MyScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Scanner/MyScanner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -36,11 +43,94 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;game__winner&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.kim.testpackage" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kimswartz.diceLab.Main" />
+      <module name="dice_lab_2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kimswartz.diceLab.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DieTest.testRollingInRange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dice_lab_2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kim.testpackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kim.testpackage" />
+      <option name="MAIN_CLASS_NAME" value="com.kim.testpackage.DieTest" />
+      <option name="METHOD_NAME" value="testRollingInRange" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GamePlayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dice_lab_2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kim.testpackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kim.testpackage" />
+      <option name="MAIN_CLASS_NAME" value="com.kim.testpackage.GamePlayTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dice_lab_2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kim.testpackage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kim.testpackage" />
+      <option name="MAIN_CLASS_NAME" value="com.kim.testpackage.PlayerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.GamePlayTest" />
+        <item itemvalue="JUnit.PlayerTest" />
+        <item itemvalue="JUnit.DieTest.testRollingInRange" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,5 +141,16 @@
       <updated>1696160540596</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
