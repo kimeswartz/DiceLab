@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab2d9182-cb39-4392-b965-bbb6c93f05f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Test/com/kim/testpackage/DieTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/com/kim/testpackage/PlayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dice_lab_2023.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dice_lab_2023.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Die.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Die.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/GameLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/GamePlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/GamePlay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Scanner/MyScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kimswartz/diceLab/Scanner/MyScanner.java" afterDir="false" />
-    </list>
+    <list default="true" id="ab2d9182-cb39-4392-b965-bbb6c93f05f1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
